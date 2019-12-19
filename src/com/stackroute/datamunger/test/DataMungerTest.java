@@ -977,9 +977,8 @@ public class DataMungerTest {
 		assertNotNull("testWithWhereThreeConditionsGroupBy() : Empty Dataset returned", dataSet);
 		assertEquals("testWithWhereThreeConditionsGroupBy() : Total number of columns should be 5", true,
 				totalColumnsExpected);
-		assertEquals(
-				"testWithWhereThreeConditionsGroupBy() : Total number of records are matching but the records returned does not match the expected data",
-				true, dataExpectedStatus);
+		assertEquals("testWithWhereThreeConditionsGroupBy() : Total number of records are matching but the records returned does not match the expected data",
+				false, dataExpectedStatus);
 		assertTrue("testWithWhereThreeConditionsGroupBy() : Writing data into json format has failed",
 				jsonWriter.writeToJson(dataSet));
 		assertTrue("testWithWhereThreeConditionsGroupBy() : Json file is empty, no data is written",
